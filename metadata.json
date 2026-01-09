@@ -1,0 +1,8 @@
+{
+  "name": "Professional CV Generator & Portfolio",
+  "description": "A high-end, professional CV web application for Tien Pham Minh, featuring AI-powered resume polishing and high-resolution image generation for portfolio branding.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
