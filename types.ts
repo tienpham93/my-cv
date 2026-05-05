@@ -8,12 +8,31 @@ export interface Experience {
   product?: string;
   team?: string;
   bullets: string[];
+  forcePageBreak?: boolean;
 }
 
 export interface Certification {
   name: string;
   url?: string;
   note?: string;
+}
+
+export interface Project {
+  name: string;
+  url?: string;
+  description: string;
+  bullets: string[];
+  diagram?: string;
+  image?: string;
+}
+
+export interface Award {
+  title: string;
+  issuer: string;
+  date: string;
+  association?: string;
+  description: string;
+  image?: string;
 }
 
 export interface CVData {
@@ -23,6 +42,8 @@ export interface CVData {
   contact: {
     location: string;
     phone: string;
+    locationSecondary?: string;
+    phoneSecondary?: string;
     email: string;
     linkedin: string;
   };
@@ -33,6 +54,8 @@ export interface CVData {
   }[];
   experience: Experience[];
   certifications: Certification[];
+  personalProjects?: Project[];
+  honorsAndAwards?: Award[];
   education: {
     school: string;
     location: string;

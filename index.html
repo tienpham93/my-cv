@@ -15,10 +15,18 @@
         .font-serif {
             font-family: 'Playfair+Display', serif;
         }
+        .pdf-capture {
+            overflow: visible !important;
+        }
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
             @page {
-                margin: 0;
-                size: auto;
+                size: A4 portrait;
+                margin: 0.5cm;
             }
             body {
                 background-color: white !important;
@@ -43,10 +51,65 @@
                 border-radius: 0 !important;
                 overflow: visible !important;
             }
-            /* Force the content to occupy full width when printing */
-            .md\:ml-64 {
-                margin-left: 0 !important;
-            }
+        }
+        /* Fix for html2pdf capture */
+        .pdf-capture {
+            width: 1024px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: white !important;
+            height: auto !important;
+            overflow: visible !important;
+            transform: none !important;
+        }
+        .pdf-capture * {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            box-shadow: none !important;
+            text-rendering: auto !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            letter-spacing: normal !important;
+            box-sizing: border-box !important;
+        }
+        .pdf-capture .cv-container {
+            width: 1024px !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding-right: 40px !important; /* Safety padding to prevent right-side clipping */
+            overflow: visible !important;
+        }
+        .pdf-capture li, 
+        .pdf-capture .group {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+        }
+        .force-page-break {
+            page-break-before: always !important;
+            break-before: page !important;
+        }
+        .pdf-capture #cv-avatar,
+        .pdf-capture #cv-avatar-fallback {
+            width: 80px !important;
+            height: 80px !important;
+            min-width: 80px !important;
+            min-height: 80px !important;
+            border-radius: 50% !important;
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+        .pdf-capture #cv-avatar-fallback {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background-color: #1e293b !important;
+            color: #3b82f6 !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
         }
     </style>
 <script type="importmap">
@@ -60,8 +123,10 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

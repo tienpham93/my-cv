@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "react-router-dom": "^7.12.0",
-    "react-dom": "^19.2.3",
     "@google/genai": "^1.35.0",
-    "react": "^19.2.3"
+    "html2pdf.js": "^0.14.0",
+    "mermaid": "^11.14.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

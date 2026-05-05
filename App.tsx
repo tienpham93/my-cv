@@ -9,48 +9,54 @@ import BrandingStudio from './components/BrandingStudio';
 const INITIAL_CV_DATA: CVData = {
   name: "TIEN PHAM MINH",
   avatar: "Avatar.png", 
-  title: "Software Quality Engineer | AWS Certified Solutions Architect",
+  title: "Software Quality Engineer",
   contact: {
     location: "Hong Kong",
     phone: "+852 5570 6811",
+    locationSecondary: "Vietnam",
+    phoneSecondary: "+849 3321 6875",
     email: "phamminhtien7693@gmail.com",
     linkedin: "https://www.linkedin.com/in/tienpham93/"
   },
-  summary: "Software Quality Engineer with nearly 6 years of experience in automation and manual testing. Strong technical background in software development (OOP) and microservices systems. Proficient in building automation frameworks from scratch using TypeScript (Playwright, Cypress) and Java (Selenium). Experienced in setting up CI pipelines and TestOps workflows using Jenkins, Docker, and Shell Scripting. Currently focusing on AI/LLM evaluation processes with a strong foundation in ISTQB testing standards.",
+  summary: "Software Quality Engineer with 6 years of experience in automation and manual testing. Strong technical background in software development (OOP) and microservices systems. Proficient in building automation frameworks from scratch using TypeScript (Playwright, Cypress) and Java (Selenium). Experienced in setting up CI pipelines and TestOps workflows using Jenkins, Docker, and Shell Scripting. Currently focusing on AI/LLM evaluation processes with a strong foundation in ISTQB testing standards.",
   skills: [
-    { category: "Automation", items: ["Playwright", "Cypress", "Selenium", "WebDriverIO", "Cucumber (BDD)", "Page Object Model (POM)"] },
-    { category: "Languages", items: ["TypeScript (Primary)", "Java", "Python"] },
-    { category: "CI Pipelines & TestOps", items: ["Jenkins", "Docker", "Shell/Bash Scripting", "Harness", "Gitlab"] },
-    { category: "Cloud & Systems", items: ["AWS (Certified Solutions Architect)", "Microservices (Upstream/Downstream data flow)", "ECS", "EKS", "CloudWatch"] },
+    { category: "Automation", items: ["Playwright", "Cypress", "Selenium", "WebDriverIO", "Cucumber (BDD)", "Mountebank", "WireMock"] },
+    { category: "Languages", items: ["TypeScript", "Python", "Java"] },
+    { category: "CI/CD & TestOps", items: ["Jenkins", "Docker", "Shell/Bash Scripting", "Gitlab"] },
+    { category: "Cloud Service Experience", items: ["AWS ECS", "AWS EKS", "AWS CloudWatch", "AWS S3", "Google cloud storage"] },
     { category: "Testing Focus", items: ["UI & API Automation", "LLM Evaluation", "System Integration", "Shift-Left Testing"] }
   ],
   experience: [
     {
       company: "TEKsystems",
-      client: "Apple",
       location: "Hong Kong",
-      role: "Quality Engineer",
+      role: "Vendor Quality Engineer for Apple",
       period: "Sept 2025 – Present",
-      product: "Siri (AI-Powered Multilingual iOS Application)",
+      product: "Siri",
       team: "LLM Evaluation",
       bullets: [
         "Refine and dry-run automation scenarios to generate high-quality contexts used for training LLM agents.",
-        "Apply ISTQB testing principles to perform human validation (triaging) and root cause analysis on LLM-executed test results to identify defect patterns.",
+        "Perform human validation (triaging) and root cause analysis on LLM-executed test results to identify defect patterns.",
         "Manage and provision test devices based on iOS build information and test plan configurations.",
-        "Localize and optimize Vietnamese test datasets to ensure accuracy and cultural relevance."
+        "Localize and optimize Vietnamese test datasets to ensure accuracy and cultural relevance.",
+        "Build and maintain internal applications (Python - UV) to wrap common CLI tools and Apple internal API services into intuitive GUI consoles for manual QA teams. Tech stacks: ",
+        "- Frontend: Streamlit dashboard and Backend: Flask",
+        "- Dependency Management: UV and Makefile for quick packages installation and custom commands",
+        "- AI Integration: Integrated Gemini CLI, authoring GEMINI.md as well as custom other markdown skills."
       ]
     },
     {
       company: "NAB Innovation Centre Vietnam",
-      location: "Vietnam",
+      location: "Ho Chi Minh City, Vietnam",
       role: "Quality Engineer",
       period: "Feb 2022 – July 2025",
       bullets: [
-        "Maintained and optimized test repositories (Blackbox, System tests) using Playwright and Cypress, ensuring high stability and reliability.",
+        "Maintained and optimized test repositories that under management of my team",
         "Ensured automation coverage for UI and API layers met NAB’s quality standards.",
-        "Supported tracing and debugging of incidents across microservices systems, coordinating between Vietnam and offshore teams in Dev, System Integration, and Production environments.",
-        "Prepared API collections, test data, and environments for non-functional performance testing.",
-        "Researched and implemented technical spikes, including setting up CI pipelines (Jenkins, Docker), automation frameworks, and stub/mock tools."
+        "Supported tracing and debugging of incidents across many services, coordinating between Vietnam and offshore teams in Dev, System Integration, and Production environments.",
+        "Prepared API collections, test data, and environments for non-functional testing (Performance test)",
+        "Researched and implemented technical spikes such as automation frameworks, and stub/mock tools, GenAI...etc",
+        "Guided new team members through code reviews as well as provide hand-on automation best practices"
       ]
     },
     {
@@ -59,9 +65,11 @@ const INITIAL_CV_DATA: CVData = {
       role: "Automation and Manual QA",
       period: "Feb 2020 – Jan 2022",
       bullets: [
-        "Automation Testing: Built automation frameworks from scratch using Selenium (Java) following BDD and TDD models; Built API testing collections using Postman and REST-assured.",
+        "Built automation frameworks from scratch using Selenium (Java) following BDD and TDD models",
+        "Built API testing collections using Postman and REST-assured.",
         "Applied modern non-selenium tools such as Playwright and Cypress for specific project needs.",
-        "Manual Testing: Executed manual testing following ISTQB practices; Gained domain experience in Marketing & Retail, Recruitment, and Security & Monitoring."
+        "Manual Testing: Created and Executed test cases following ISTQB practices",
+        "Experienced these domains: Marketing & Retail, Recruitment, and Security & Monitoring."
       ]
     },
     {
@@ -89,7 +97,7 @@ const INITIAL_CV_DATA: CVData = {
   certifications: [
     {
       name: "AWS Certified Solutions Architect – Associate",
-      url: "https://www.credly.com/badges/1447f061-dbec-4226-8277-6bf73a478560"
+      url: "https://www.credly.com/earner/earned/badge/1447f061-dbec-4226-8277-6bf73a478560"
     },
     {
       name: "AWS Certified Cloud Practitioner",
@@ -108,6 +116,30 @@ const INITIAL_CV_DATA: CVData = {
       note: "University of Science Ho Chi Minh City"
     }
   ],
+  personalProjects: [
+    {
+      name: "AutoAgent: Agentic Automation Framework",
+      url: "https://github.com/tienpham93/AutoAgent",
+      description: "An autonomous agent-driven testing framework powered by LangChain, LangGraph, and Playwright that transforms natural language test cases into executed actions and verified results.",
+      bullets: [
+        "Built a multi-agent orchestration system utilizing Architect, AutoBot, Evaluator, and Inspector agents to automate the complete testing lifecycle.",
+        "Implemented self-healing execution by enabling agents to dynamically scan Element Trees and generate Playwright code on-the-fly, eliminating brittle selector dependencies.",
+        "Integrated multimodal evaluation using Google Gemini (LLM-as-a-Judge) to verify execution results through video analysis and visual evidence comparison.",
+        "Developed a system audit layer to detect hallucinations, infrastructure lag, and syntax errors, ensuring high reliability in autonomous runs.",
+        "Tech Stack: TypeScript, LangChain, LangGraph, Playwright, Google Gemini API"
+      ],
+      image: "auto_agent_diagram.png"
+    }
+  ],
+  honorsAndAwards: [
+    {
+      title: "NAB Vietnam - Star of the year award",
+      issuer: "NAB Vietnam",
+      date: "Jan 2025",
+      association: "NAB Innovation Centre Vietnam",
+      description: "The FY24 NAB Vietnam Star of the Year, under the Team Award category. This prestigious recognition highlights Copper team’s exemplary performance, dedication, and significant contributions to NAB Vietnam innovation centre, as well as consistent with NAB values."
+    }
+  ],
   education: {
     school: "Ton Duc Thang University",
     location: "Vietnam",
@@ -116,13 +148,62 @@ const INITIAL_CV_DATA: CVData = {
   }
 };
 
-const Sidebar = () => {
+const downloadPDF = (userName: string, setShowPrintModal: (show: boolean) => void) => {
+  // Check if we are inside an iframe where print is blocked
+  if (window.self !== window.top) {
+    setShowPrintModal(true);
+    return;
+  }
+  
+  // Use native window.print() for perfect ATS-friendly text PDFs
+  // with working hyperlinks and native print CSS page break support.
+  window.print();
+};
+
+const PrintWarningModal = ({ onClose }: { onClose: () => void }) => (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4 no-print">
+    <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 transform transition-all">
+      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4 mx-auto">
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 className="text-lg font-bold text-slate-900 text-center mb-2">Print / Save as PDF</h3>
+      <p className="text-slate-600 text-sm text-center mb-6">
+        To save as a high-quality, ATS-friendly PDF with working links, you must open this app in a <strong>new tab</strong>, then click Print again.
+      </p>
+      <div className="flex flex-col gap-3">
+        <a 
+          href={window.location.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition-colors w-full shadow-md"
+        >
+          <span>Open in New Tab</span>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+        <button 
+          onClick={onClose}
+          className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium py-2.5 px-6 rounded-lg transition-colors w-full"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+);
+
+const Sidebar = ({ userName, setShowPrintModal }: { userName: string, setShowPrintModal: (show: boolean) => void }) => {
   const location = useLocation();
   const links = [
     { to: "/", label: "Resume View", icon: "📄" },
     { to: "/branding", label: "Branding Studio", icon: "🎨" },
     { to: "/ai-assistant", label: "AI Enhancer", icon: "✨" },
   ];
+
+  const handleDownloadPDF = () => downloadPDF(userName, setShowPrintModal);
 
   return (
     <nav className="w-64 bg-slate-900 text-white min-h-screen p-6 fixed hidden md:block no-print">
@@ -145,6 +226,14 @@ const Sidebar = () => {
             <span className="font-medium">{link.label}</span>
           </Link>
         ))}
+        
+        <button
+          onClick={handleDownloadPDF}
+          className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all text-slate-300 hover:bg-slate-800 mt-4 border border-slate-700/50"
+        >
+          <span>📥</span>
+          <span className="font-medium">Print / Save PDF</span>
+        </button>
       </div>
       <div className="absolute bottom-10 left-6 right-6 p-4 bg-slate-800 rounded-xl border border-slate-700">
         <p className="text-xs text-slate-400">AWS Certified</p>
@@ -157,17 +246,23 @@ const Sidebar = () => {
   );
 };
 
-const MobileNav = () => (
-  <nav className="md:hidden bg-slate-900 text-white p-4 sticky top-0_z-50 flex justify-around no-print border-b border-slate-800">
-    <Link to="/" className="text-sm font-medium">Resume</Link>
-    <Link to="/branding" className="text-sm font-medium">Branding</Link>
-    <Link to="/ai-assistant" className="text-sm font-medium">AI Enhancer</Link>
-  </nav>
-);
+const MobileNav = ({ userName, setShowPrintModal }: { userName: string, setShowPrintModal: (show: boolean) => void }) => {
+  const handleDownloadPDF = () => downloadPDF(userName, setShowPrintModal);
+
+  return (
+    <nav className="md:hidden bg-slate-900 text-white p-4 sticky top-0 z-50 flex justify-around no-print border-b border-slate-800">
+      <Link to="/" className="text-sm font-medium">Resume</Link>
+      <Link to="/branding" className="text-sm font-medium">Branding</Link>
+      <Link to="/ai-assistant" className="text-sm font-medium">AI Enhancer</Link>
+      <button onClick={handleDownloadPDF} className="text-sm font-medium text-blue-400">PDF</button>
+    </nav>
+  );
+};
 
 const App: React.FC = () => {
   const [cvData, setCvData] = useState<CVData>(INITIAL_CV_DATA);
   const [hasApiKey, setHasApiKey] = useState(false);
+  const [showPrintModal, setShowPrintModal] = useState(false);
 
   useEffect(() => {
     const checkKey = async () => {
@@ -195,9 +290,10 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col md:flex-row min-h-screen bg-slate-50">
-        <Sidebar />
-        <MobileNav />
-        <main className="flex-1 md:ml-64 transition-all duration-300">
+        {showPrintModal && <PrintWarningModal onClose={() => setShowPrintModal(false)} />}
+        <Sidebar userName={cvData.name} setShowPrintModal={setShowPrintModal} />
+        <MobileNav userName={cvData.name} setShowPrintModal={setShowPrintModal} />
+        <main className="flex-1 md:ml-64 print:ml-0 transition-all duration-300">
           {!hasApiKey && (
             <div className="p-8 bg-amber-50 border-b border-amber-200 no-print flex items-center justify-between">
               <div>
@@ -213,7 +309,7 @@ const App: React.FC = () => {
               </button>
             </div>
           )}
-          <div className="p-4 md:p-10 max-w-5xl mx-auto">
+          <div className="p-4 md:p-10 print:p-0 print:m-0 print:max-w-none print:w-full mx-auto">
             <Routes>
               <Route path="/" element={<CVView data={cvData} />} />
               <Route path="/branding" element={<BrandingStudio />} />
