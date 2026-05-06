@@ -9,7 +9,7 @@ import BrandingStudio from './components/BrandingStudio';
 const INITIAL_CV_DATA: CVData = {
   name: "TIEN PHAM MINH",
   avatar: "Avatar.png", 
-  title: "Software Quality Engineer",
+  title: "Software Test Engineer | SDET",
   contact: {
     location: "Hong Kong",
     phone: "+852 5570 6811",
@@ -33,7 +33,7 @@ const INITIAL_CV_DATA: CVData = {
       role: "Vendor Quality Engineer for Apple",
       period: "Sept 2025 – Present",
       product: "Siri",
-      team: "LLM Evaluation",
+      team: "LLM Evaluation | Apple HK Test House",
       bullets: [
         "Refine and dry-run automation scenarios to generate high-quality contexts used for training LLM agents.",
         "Perform human validation (triaging) and root cause analysis on LLM-executed test results to identify defect patterns.",
@@ -68,8 +68,7 @@ const INITIAL_CV_DATA: CVData = {
         "Built automation frameworks from scratch using Selenium (Java) following BDD and TDD models",
         "Built API testing collections using Postman and REST-assured.",
         "Applied modern non-selenium tools such as Playwright and Cypress for specific project needs.",
-        "Manual Testing: Created and Executed test cases following ISTQB practices",
-        "Experienced these domains: Marketing & Retail, Recruitment, and Security & Monitoring."
+        "Manual Testing: Created and Executed test cases following ISTQB practices"
       ]
     },
     {

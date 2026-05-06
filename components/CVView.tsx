@@ -224,7 +224,7 @@ const CVView: React.FC<Props> = ({ data }) => {
         </section>
 
         {/* Experience */}
-        <section>
+        <section className="print:break-before-page">
           <div className="space-y-8 print:space-y-6 block">
             {data.experience.map((exp, idx) => (
               <div key={idx} className={`${exp.forcePageBreak ? 'force-page-break' : ''}`}>
