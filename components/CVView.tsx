@@ -241,7 +241,9 @@ const CVView: React.FC<Props> = ({ data }) => {
                       <p className="text-blue-600 font-semibold text-xs italic tracking-wide break-words">{exp.role}</p>
                       {exp.product && (
                         <p className="text-slate-500 text-[11px] mt-1 break-words">
-                          <span className="font-bold uppercase opacity-70">Product:</span> {exp.product} | <span className="font-bold uppercase opacity-70">Team:</span> {exp.team}
+                          <span className="font-bold uppercase opacity-70">Product:</span> {exp.product}
+                          {exp.team && <> | <span className="font-bold uppercase opacity-70">Team:</span> {exp.team}</>}
+                          {exp.onSite && <> | <span className="font-bold uppercase opacity-70">On-site:</span> {exp.onSite}</>}
                         </p>
                       )}
                     </div>

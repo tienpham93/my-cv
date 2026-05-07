@@ -7,7 +7,7 @@ import AISettings from './components/AISettings';
 import BrandingStudio from './components/BrandingStudio';
 
 const INITIAL_CV_DATA: CVData = {
-  name: "TIEN PHAM MINH",
+  name: "PHAM MINH TIEN",
   avatar: "Avatar.png", 
   title: "Software Test Engineer | SDET",
   contact: {
@@ -33,13 +33,14 @@ const INITIAL_CV_DATA: CVData = {
       role: "Vendor Quality Engineer for Apple",
       period: "Sept 2025 – Present",
       product: "Siri",
-      team: "LLM Evaluation | Apple HK Test House",
+      team: "LLM Evaluation",
+      onSite: "Apple HK Test House",
       bullets: [
         "Refine and dry-run automation scenarios to generate high-quality contexts used for training LLM agents.",
         "Perform human validation (triaging) and root cause analysis on LLM-executed test results to identify defect patterns.",
         "Manage and provision test devices based on iOS build information and test plan configurations.",
         "Localize and optimize Vietnamese test datasets to ensure accuracy and cultural relevance.",
-        "Build and maintain internal applications (Python - UV) to wrap common CLI tools and Apple internal API services into intuitive GUI consoles for manual QA teams. Tech stacks: ",
+        "Build and maintain an internal app(Python - UV) to wrap common CLI tools and Apple internal API services into intuitive GUI consoles for manual QA teams. Tech stacks: ",
         "- Frontend: Streamlit dashboard and Backend: Flask",
         "- Dependency Management: UV and Makefile for quick packages installation and custom commands",
         "- AI Integration: Integrated Gemini CLI, authoring GEMINI.md as well as custom other markdown skills."
@@ -119,13 +120,13 @@ const INITIAL_CV_DATA: CVData = {
     {
       name: "AutoAgent: Agentic Automation Framework",
       url: "https://github.com/tienpham93/AutoAgent",
-      description: "An autonomous agent-driven testing framework powered by LangChain, LangGraph, and Playwright that transforms natural language test cases into executed actions and verified results.",
+      description: "An agentic automation framework powered by LangChain, LangGraph, and Playwright",
       bullets: [
-        "Built a multi-agent orchestration system utilizing Architect, AutoBot, Evaluator, and Inspector agents to automate the complete testing lifecycle.",
-        "Implemented self-healing execution by enabling agents to dynamically scan Element Trees and generate Playwright code on-the-fly, eliminating brittle selector dependencies.",
-        "Integrated multimodal evaluation using Google Gemini (LLM-as-a-Judge) to verify execution results through video analysis and visual evidence comparison.",
-        "Developed a system audit layer to detect hallucinations, infrastructure lag, and syntax errors, ensuring high reliability in autonomous runs.",
-        "Tech Stack: TypeScript, LangChain, LangGraph, Playwright, Google Gemini API"
+        "Designed a multi-agent workflow where specialized agents: Architect, AutoBot, Evaluator, and Inspector collaborate to handle different phases of the test automation cycle.",
+        "Architect agent: Analyzes raw test basis (Markdown/Feature files), maps proper playwright-cli skills and page knowledges, then finally extracts them into a structured execution plan.",
+        "AutoBot agent: with flexible workflow that dynamically scan Element Trees and generate Playwright CLI scripts on-the-fly to automate test steps and self-heal on errors.",
+        "Evaluator agent: Uploads the execution video to Google Gemini (Multimodal), watches the playback, and compares visual evidence against the test requirements.",
+        "Inspector agent: a system audit layer that collect and analyze agent performance and network health through terminal logs."
       ],
       image: "auto_agent_diagram.png"
     }

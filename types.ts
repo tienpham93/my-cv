@@ -7,6 +7,7 @@ export interface Experience {
   period: string;
   product?: string;
   team?: string;
+  onSite?: string;
   bullets: string[];
   forcePageBreak?: boolean;
 }
